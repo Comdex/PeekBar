@@ -1,6 +1,8 @@
 var main = function () {
   "use strict";
-  $('.content').click(function () { // 点击内容
+  $(document.getElementById("photo")).click(function () { // 点击内容
+    var imglnk = this.src; // 获取所点击的这张图的地址
+    document.getElementById("photoInBar").src = imglnk; // 在 PeekBar 中显示大图，其地址与页面上原图的地址相同
     $('.barrier').fadeIn(300); // 半透明图层逐渐出现
     $('.peekbar').animate({ top: "50%" }, 300); // PeekBar 滑入
     $('.main').animate({ zoom: "95%", height: "95%", width: "95%", top: "2.5%", left: "2.5%" }, 300); // 主内容区域缩小
