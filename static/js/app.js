@@ -1,16 +1,14 @@
 var main = function () {
   "use strict";
-  $('.content').click(function () {
-    $('.barrier').fadeIn(300);
-    $('.peekbar').animate({ top: "50%" }, 300);
-    $('.main').animate({ width: "95%", top: "2.5%", left: "2.5%" }, 300);
-
-
+  $('.content').click(function () { // 点击内容
+    $('.barrier').fadeIn(300); // 半透明图层逐渐出现
+    $('.peekbar').animate({ top: "50%" }, 300); // PeekBar 滑入
+    $('.main').animate({ width: "95%", top: "2.5%", left: "2.5%" }, 300); // 主内容区域缩小
   });
-  $(document.getElementById("done")).click(function () {
-    $('.barrier').fadeOut(300);
-    $('.peekbar').animate({ top: "100%" }, 300);
-    $('.main').animate({ width: "100%", top: "0%", left: "0%" }, 300);
+  $(document.getElementById("done")).click(function () { // 点击 Done 按钮
+    $('.barrier').fadeOut(300); // 半透明图层逐渐隐藏
+    $('.peekbar').animate({ top: "100%" }, 300); // PeekBar 滑出
+    $('.main').animate({ width: "100%", top: "0%", left: "0%" }, 300); // 主内容区域放大
   });
 };
 
